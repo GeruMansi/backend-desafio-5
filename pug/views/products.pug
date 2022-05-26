@@ -1,0 +1,20 @@
+extends index.pug
+
+block content
+    table(class="table mt-5")
+        thead
+            tr
+                th(scope="col")="#"
+                th(scope="col")="Productos"
+                th(scope="col")="Precio"
+                th(scope="col")="Imagen"
+        tbody
+            each product in products
+                tr
+                    th(scope="row")=product.id
+                    td=product.title
+                    td=product.price
+                    td
+                        img(src=product.thumbnail)
+            else
+                div(class="alert dark-warning text-center" role="alert")="No hay productos para mostrar"

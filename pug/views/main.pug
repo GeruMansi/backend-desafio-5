@@ -1,0 +1,16 @@
+extends index.pug
+
+block content
+    h3(class="text-center mt-5 mb-3")=message
+
+    form(class="mb-5 mx-auto col-6" method="post" action="/productos")
+        div(class="mb-3")
+            label(for="title" class="form-label")="Producto"
+            input(type="text" class="form-control" name="title")
+        div(class="mb-3")
+            label(for="price" class="form-label")="Precio"
+            input(type="number" class="form-control" name="price")
+        div(class="mb-3")
+            label(for="thumbnail" class="form-label")="URL imagen"
+            input(type="text" class="form-control" name="thumbnail")
+        button(type="submit" class="btn btn-primary")="Submit"
