@@ -29,7 +29,7 @@ app.post('/productos', (req, res) => {
     
     products.push(newProduct)
 
-    return res.status(201).json(newProduct)
+    return res.redirect('/')
 })
 
 const PORT = 8080
