@@ -12,7 +12,7 @@ app.engine('hbs', engine({
     partialsDir: `${__dirname}/views/partials`
 }))
 
-app.set('views', './views')
+app.set('views', `${__dirname}/views`)
 app.set('view engine', 'hbs')
 
 const products = []

@@ -22,7 +22,7 @@
           </tr>
         </thead>
         <tbody>
-            <% if (products) { %>
+            <% if (products.length > 0) { %>
                 <% products.forEach(product => { %>
                     <tr>
                         <th scope="row"><%= product.id %></th>
@@ -31,6 +31,8 @@
                         <td><img src=<%= product.thumbnail %> alt="" width="150"></td>
                     </tr>
                 <% }) %>
+           <% } else { %>
+                <div class="alert dark-warning text-center" role="alert">No hay productos para mostrar</div>
            <% } %>
         </tbody>
       </table>
